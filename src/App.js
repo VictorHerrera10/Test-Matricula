@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import HomePage from './public/pages/home.page';
+import SchedulePage from './utp/pages/schedule.page'; // Nueva página para mostrar el horario
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Router>
+            <Routes>
+                {/* Ruta para la página principal (cursos matriculados) */}
+                <Route path="/" element={<HomePage />} />
+
+                {/* Ruta para la página del horario */}
+                <Route path="/schedule" element={<SchedulePage />} />
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;

@@ -1,38 +1,180 @@
-.App {
+/* src/App.css */
+
+.container {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d32f2f;
+  color: white;
+  padding: 20px;
+}
+
+.left-panel {
+  width: 25%;
+  float: left;
+}
+
+.right-panel {
+  width: 70%;
+  float: right;
+}
+
+.header-logo img {
+  width: 50px;
+}
+
+header h1 {
+  margin-left: 10px;
+}
+
+.profile {
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.profile img {
+  width: 100px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.profile-info p {
+  margin: 5px 0;
+}
+
+
+.enrolled-courses .buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.courses {
+  padding: 20px;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.course-card {
+  background: linear-gradient(to bottom, #ffffff, #e0e0e0);
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.course-card h3 {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.course-card p {
+  color: #666;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.course-card .status {
+  display: block;
+  margin-top: 10px;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.course-card .inscrito {
+  background-color: green;
+}
+
+.course-card .pendiente {
+  background-color: red;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #b71c1c;
+}
+
+footer {
+  clear: both;
+}
+
+/* Agregar los colores en degradado para el card de cursos matriculados */
+.enrolled-courses{
+  background: linear-gradient(to bottom, #000000, #0C002F);
+  color: white;
+  border-radius: 8px;
+  padding: 20px;
+  position: relative;
+}
+
+/* Botón para eliminar curso (la "X") */
+.course-card .remove-course {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Botones de "Ver Horario" y "Guardar" */
+.btn {
+  padding: 10px 20px;
+  background-color: #007523;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #005a1c;
+}
+
+/* Modificación para los cuadros de los cursos matriculados */
+.enrolled-courses .course-list {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.course-card {
+  background: white;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.course-card .course-info {
+  flex: 1;
 }
+
+.course-card .remove-course {
+  cursor: pointer;
+}
+
